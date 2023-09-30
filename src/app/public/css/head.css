@@ -49,4 +49,9 @@
 .dropdownMenu button:hover {
     background-color: #9DC4FF;
 }
-
+.buscador{
+    border-radius: 30px;
+    width: 200px;
+    height: 25px;
+    position: relative;
+}

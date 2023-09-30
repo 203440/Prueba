@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import Head from "../../components/head"
 import '../../public/css/carrito.css'
 import GooglePayButton from '@google-pay/button-react'
 
 import { toast } from 'react-toastify';
+import { CartContext } from "./cartContext";
 
 export default function Carrito(){
     const notify = () => {
@@ -16,7 +18,9 @@ export default function Carrito(){
           progress: undefined,
           theme: "light",
           });
-      }
+    }
+
+    const {cart, clearCart} = useContext(CartContext)
     return (
         <div>
             <Head></Head>
@@ -31,20 +35,17 @@ export default function Carrito(){
                             </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Producto Ejemplo</td>
-                            <td>$100.00</td>
-                        </tr><tr>
-                            <td>1</td>
-                            <td>Producto Ejemplo</td>
-                            <td>$100.00</td>
-                        </tr>
+                            {cart.map((product, index) =>
+                            <tr key={index}>
+                                <td>1</td>
+                                <td>{product.nombre}</td>
+                                <td>${product.precio}</td>
+                            </tr>)}
                         </tbody>
                     </table>
                 </div>
                 <div className="buttons_carrito">
-                    <button id="vaciar">Vaciar carrito</button>
+                    <button id="vaciar" onClick={clearCart}>Vaciar carrito</button>
                     <GooglePayButton
                         environment="TEST"
                         paymentRequest={{

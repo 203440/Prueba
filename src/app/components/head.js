@@ -29,7 +29,7 @@ export default function Head(){
                         )}
                     </div>
                     <button className='boton' onClick={() => navigate('/carrito')}><img src={carrito} alt='Carrito' className='carrito'></img></button>
-                    <input type="text" placeholder="Buscar Producto" value={searchQ} onChange={e => setSearchQ(e.target.value)}/>
+                    <input type="text" placeholder="Buscar Producto" value={searchQ} onChange={e => setSearchQ(e.target.value)} className='buscador'/>
                     <button className='boton'>
                         Buscar
                     </button>

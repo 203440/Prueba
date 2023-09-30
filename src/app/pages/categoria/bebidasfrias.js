@@ -18,8 +18,8 @@ export default function BebidasFrias(){
             <div className='productos'>
                     {filtered.map(producto => (
                         <div className='produ' key={producto.id}>
-                                <img onClick={() => navigate(`/product/${producto.id}`)} src={producto.imagen} alt={producto.nombre} className="imagen-sombra"></img>
-                                <h2 onClick={() => navigate(`/product/${producto.id}`)}>{producto.nombre}</h2>
+                                <img onClick={() => navigate(`/product/frias/${producto.id}`)} src={producto.imagen} alt={producto.nombre} className="imagen-sombra"></img>
+                                <h2 onClick={() => navigate(`/product/frias/${producto.id}`)}>{producto.nombre}</h2>
                             <p>${producto.precio}</p>
                         </div>
                     ))}

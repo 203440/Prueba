@@ -5,9 +5,37 @@ import Head from '../../components/head'
 import { productosFrias } from "../../components/datafrias";
 import { productosPostres } from "../../components/datapostres";
 import { productosCalientes } from "../../components/datacaliente";
+import { productosComida } from "../../components/datacomida";
+import { useContext } from "react";
+import { CartContext } from "../carrito/cartContext";
+import {toast} from 'react-toastify'
+
 export default function Productodetail(){
     const {id} = useParams();
-    const product = productos && productosFrias && productosPostres && productosCalientes.find (p => p.id === parseInt (id));
+
+    const product =
+    (productos && productos.find(p => p.id === parseInt(id))) ||
+    (productosFrias && productosFrias.find(p => p.id === parseInt(id))) ||
+    (productosCalientes && productosCalientes.find(p => p.id === parseInt(id))) ||
+    (productosPostres && productosPostres.find(p => p.id === parseInt(id))) ||
+    (productosComida && productosComida.find(p => p.id === parseInt(id)));
+    
+    const {addCart} =useContext(CartContext);
+
+    const hadleAddCart = () => {
+        addCart (product);
+        toast.success('Producto enviado al  Carrito con Exito',{
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: true, 
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "light",
+        })
+    }
+     
     return (
         <div>
             <Head></Head>
@@ -21,7 +49,7 @@ export default function Productodetail(){
                     <p>{product.descripcion}</p>
                     </div>
                     <p>${product.precio}</p>
-                    <button>Agregar al Carrito</button>
+                    <button onClick={hadleAddCart} className="agregar">Agregar al Carrito</button>
                 </div>
                 </div>
             </div>
