@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './app/pages/home/home';
+import {
+  BrowserRouter as Router,
+  Route, 
+  Routes
+} from "react-router-dom";
+import ProductosDetail from './app/pages/producto/productodetail';
+import Carrito from './app/pages/carrito/carrito';
+import React, {useState} from 'react';
+import Search from './app/components/searchContext';
+import Comidas from './app/pages/categoria/comidas'
+import BebidasCalientes from './app/pages/categoria/bebidacaliente';
+import BebidasFrias from './app/pages/categoria/bebidasfrias';
+import Postres from './app/pages/categoria/postres';
 function App() {
+  const [searchQ, setSearchQ] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Search.Provider value={{searchQ, setSearchQ}}>
+        <Routes>
+          <Route path="/product/:id" element={<ProductosDetail/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/carrito" element={<Carrito/>} />
+          <Route path="/comidas" element={<Comidas/>} />
+          <Route path="/bebidas-calientes" element={<BebidasCalientes/>} />
+          <Route path="/bebidas-frias" element={<BebidasFrias/>} />
+          <Route path="/postres" element={<Postres/>} />
+        </Routes>
+        </Search.Provider>
+      </div>
+    </Router>
   );
 }
 

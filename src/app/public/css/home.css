@@ -1,0 +1,30 @@
+.div1{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 50px;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.produ {
+    flex: 1 1 calc(25% - 10px);
+    margin: 5px;
+    box-sizing: border-box;
+    width:100%;
+    padding: 2%;
+}
+.produ img{
+    width: 80%;   
+    height:80%;   
+    display: block;  
+    margin: 0 auto;
+    object-fit: cover;
+}
+.imagen-sombra {
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+.imagen-sombra:hover {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
