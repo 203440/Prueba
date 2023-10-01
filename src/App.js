@@ -19,12 +19,13 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [searchQ, setSearchQ] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   return (
     <Router>
       <div className="App">
         <ToastContainer/>
-        <Search.Provider value={{searchQ, setSearchQ}}>
+        <Search.Provider value={{searchQ, setSearchQ, currentPage, setCurrentPage}}>
           <CartProvider>
             <Routes>
               <Route path="/product/oferta/:id" element={<ProductosDetail/>} />

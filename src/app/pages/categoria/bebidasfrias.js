@@ -7,16 +7,26 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BebidasFrias(){
     const navigate = useNavigate();
-    const {searchQ} = React.useContext(SearchContext)
+    const {searchQ, currentPage, setCurrentPage} = React.useContext(SearchContext)
+    const itemsPerPage = 8 ;
+
     const filtered = productosFrias.filter(producto =>
         producto.nombre.toLowerCase().includes(searchQ.toLowerCase())   
     );
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = filtered.slice(indexOfFirstItem, indexOfLastItem);
+
+    const nextPage = () => setCurrentPage(prev => prev + 1);
+    const prevPage = () => setCurrentPage(prev => prev - 1);
+
     return(
         <div>
             <Head/>
             <div>Hola desde BebidasFrias
             <div className='productos'>
-                    {filtered.map(producto => (
+                    {currentItems.map(producto => (
                         <div className='produ' key={producto.id}>
                                 <img onClick={() => navigate(`/product/frias/${producto.id}`)} src={producto.imagen} alt={producto.nombre} className="imagen-sombra"></img>
                                 <h2 onClick={() => navigate(`/product/frias/${producto.id}`)}>{producto.nombre}</h2>
@@ -24,6 +34,10 @@ export default function BebidasFrias(){
                         </div>
                     ))}
                 </div>
+            </div>
+            <div>
+                {currentPage > 1 && <button onClick={prevPage}>Anterior</button>}
+                {filtered.length > indexOfLastItem && <button onClick={nextPage}>Siguiente</button>}
             </div>
         </div>
     )
