@@ -1,17 +1,21 @@
 .div1{
     margin-top: 20px;
     display: flex;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 .productos{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .produ {
-    flex: 1 1 calc(25% - 10px);
+    /*flex: 1 1 calc(25% - 10px);*/
     margin: 5px;
     box-sizing: border-box;
     width:100%;
+    
+    flex: 1 1 calc(100% - 10px); /* Inicialmente, en móviles, toma todo el ancho disponible menos 10px */
+    
     padding: 2%;
 }
 .produ img{
@@ -27,4 +31,21 @@
 }
 .imagen-sombra:hover {
     box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+@media screen and (min-width: 600px) {
+    .produ {
+        flex: 1 1 calc(50% - 10px); 
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .produ {
+        flex: 1 1 calc(25% - 10px); 
+    }
+
+    .div1 {
+        margin-left: 5%;
+    }
 }

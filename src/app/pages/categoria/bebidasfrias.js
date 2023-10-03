@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 export default function BebidasFrias(){
     const navigate = useNavigate();
     const {searchQ, currentPage, setCurrentPage} = React.useContext(SearchContext)
-    const itemsPerPage = 8 ;
+    const itemsPerPage = 8;
 
     const filtered = productosFrias.filter(producto =>
         producto.nombre.toLowerCase().includes(searchQ.toLowerCase())   
@@ -24,8 +24,8 @@ export default function BebidasFrias(){
     return(
         <div>
             <Head/>
-            <div>Hola desde BebidasFrias
-            <div className='productos'>
+            <div><h2 className="frase">"El rincón donde los sueños se mezclan con crema."</h2>
+                <div className='productos'>
                     {currentItems.map(producto => (
                         <div className='produ' key={producto.id}>
                                 <img onClick={() => navigate(`/product/frias/${producto.id}`)} src={producto.imagen} alt={producto.nombre} className="imagen-sombra"></img>
@@ -34,10 +34,10 @@ export default function BebidasFrias(){
                         </div>
                     ))}
                 </div>
-            </div>
-            <div>
-                {currentPage > 1 && <button onClick={prevPage}>Anterior</button>}
-                {filtered.length > indexOfLastItem && <button onClick={nextPage}>Siguiente</button>}
+                <div>
+                    {currentPage > 1 && <button onClick={prevPage}>Anterior</button>}
+                    {filtered.length > indexOfLastItem && <button onClick={nextPage}>Siguiente</button>}
+                </div>
             </div>
         </div>
     )

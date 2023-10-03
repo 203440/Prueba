@@ -16,20 +16,20 @@ import p15 from '../public/img/bebidasfrias/limonada2.jpg'
 import p16 from '../public/img/bebidasfrias/malteada de fresa.jpg'
 
 export const productosFrias = [
-    {id:9, nombre: 'Batido de fresa', precio: 30, imagen:p1, descripcion: 'Batido de fresa, dulces de chocolate, crema batida y acaramelado'},
-    {id:10, nombre: 'Batido de Chocolate', precio: 35, imagen:p2, descripcion: 'Producto 1 aaaaaa'},
-    {id:11, nombre: 'Café Helado', precio: 35, imagen:p3, descripcion: 'Producto 1 aaaaaa'},
-    {id:12, nombre: 'Cafe Helado', precio: 25, imagen:p4, descripcion: 'Producto 1 aaaaaa'},
-    {id:13, nombre: 'Café Crema Batida', precio: 30, imagen:p5, descripcion: 'Producto 1 aaaaaa'},
-    {id:14, nombre: 'Café Frio', precio: 30, imagen:p6, descripcion: 'Producto 1 aaaaaa'},
-    {id:15, nombre: 'Café Frio con crema', precio: 25, imagen:p7, descripcion: 'Producto 1 aaaaaa'},
-    {id:16, nombre: 'Chocolate Frio', precio: 35, imagen:p8, descripcion: 'Producto 1 aaaaaa'},
-    {id:17, nombre: 'Chocolate Helado', precio: 30, imagen:p9, descripcion: 'Producto 1 aaaaaa'},
-    {id:18, nombre: 'Frappé de Café', precio: 35, imagen:p10, descripcion: 'Producto 1 aaaaaa'},
-    {id:19, nombre: 'Frappe de Galleta', precio: 35, imagen:p11, descripcion: 'Producto 1 aaaaaa'},
-    {id:20, nombre: 'Jugo de mango', precio: 20, imagen:p12, descripcion: 'Producto 1 aaaaaa'},
-    {id:21, nombre: 'Jugo de Naranja', precio: 20, imagen:p13, descripcion: 'Producto 1 aaaaaa'},
-    {id:22, nombre: 'Limonada y menta', precio: 20, imagen:p14, descripcion: 'Producto 1 aaaaaa'},
-    {id:23, nombre: 'Limonada Natural', precio: 20, imagen:p15, descripcion: 'Producto 1 aaaaaa'},
-    {id:24, nombre: 'Malteada de Fresa', precio: 30, imagen:p16, descripcion: 'Producto 1 aaaaaa'}
+    {id:13, nombre: 'Batido de fresa', precio: 30, imagen:p1, descripcion: 'Batido de fresa, dulces de chocolate, crema batida y acaramelado.'},
+    {id:14, nombre: 'Batido de Chocolate', precio: 35, imagen:p2, descripcion: 'Batido sabor chocolate y crema batida.'},
+    {id:15, nombre: 'Café Helado', precio: 35, imagen:p3, descripcion: 'Café helado dos capas de leche y cafe oscuro.'},
+    {id:16, nombre: 'Café Helado', precio: 25, imagen:p4, descripcion: 'Café helado mediano combinacion con leche.'},
+    {id:17, nombre: 'Café Crema Batida', precio: 30, imagen:p5, descripcion: 'Café dos capas con crema batida y chispas de chocolate.'},
+    {id:18, nombre: 'Café Frio', precio: 30, imagen:p6, descripcion: 'Café frío con crema batida y chocolate derretido.'},
+    {id:19, nombre: 'Café Frio con crema', precio: 25, imagen:p7, descripcion: 'Café frío con crema batida y acaramelado.'},
+    {id:20, nombre: 'Chocolate Frio', precio: 35, imagen:p8, descripcion: 'Chocolate Frío con crema batida.'},
+    {id:21, nombre: 'Chocolate Helado', precio: 30, imagen:p9, descripcion: 'Chocolate Helado con crema batida.'},
+    {id:22, nombre: 'Frappé de Café', precio: 35, imagen:p10, descripcion: 'Frappé de cafe con crema batida y acaramelado.'},
+    {id:23, nombre: 'Frappe de Galleta', precio: 30, imagen:p11, descripcion: 'Frappe de galletas de chocolate y acaramelado.'},
+    {id:24, nombre: 'Jugo de mango', precio: 20, imagen:p12, descripcion: 'Jugo de mango, bebida natural.'},
+    {id:25, nombre: 'Jugo de Naranja', precio: 20, imagen:p13, descripcion: 'Juego de naranja, bebida natural.'},
+    {id:26, nombre: 'Limonada y menta', precio: 20, imagen:p14, descripcion: 'Limonada con menta vaso mediano.'},
+    {id:27, nombre: 'Limonada Natural', precio: 20, imagen:p15, descripcion: 'Limonada pura vaso mediano.'},
+    {id:28, nombre: 'Malteada de Fresa', precio: 30, imagen:p16, descripcion: 'Malteada de fresa con crema batida.'}
 ];
