@@ -25,6 +25,10 @@
     margin: 0 auto;
     object-fit: cover;
 }
+.frase{
+    font-family: cursive;
+    color: rgb(101, 89, 82);
+}
 .imagen-sombra {
     box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
