@@ -24,7 +24,7 @@ export default function BebidasFrias(){
     return(
         <div>
             <Head/>
-            <div><h2 className="frase">"El rincón donde los sueños se mezclan con crema."</h2>
+            <div><h2 class="frase">"El rincón donde los sueños se mezclan con crema."</h2>
                 <div className='productos'>
                     {currentItems.map(producto => (
                         <div className='produ' key={producto.id}>

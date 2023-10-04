@@ -24,11 +24,15 @@
     display: block;  
     margin: 0 auto;
     object-fit: cover;
+    border-radius: 5%;
 }
 .frase{
-    font-family: cursive;
-    color: rgb(101, 89, 82);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(53, 175, 236), rgb(236, 53, 175));
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
 .imagen-sombra {
     box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
